@@ -19,6 +19,39 @@ It doesn't go into the details of internal microservices at this level.
 Users/Actors: The context diagram will show the external users or actors (e.g., customers, administrators, third-party systems) who interact with the product. These are typically depicted as individual blocks or icons labeled with their roles.
 External Systems: Any external systems or services that the product interacts with are also represented as blocks. These might be third-party services, databases, or other systems that the product communicates with.
 
+## Mermaid C4 Components for System Context Diagrams
+
+### Diagram Structure
+
+- `C4Context` - Declares this as a C4 Context diagram
+- `title "Diagram Title"` - Sets the diagram title
+
+### People Components
+
+- `Person(id, "Name", "Description")` - Internal user/actor who interacts with the system
+- `Person_Ext(id, "Name", "Description")` - External user/actor outside your organization
+
+### System Components
+
+- `System(id, "Name", "Description")` - Your main system being documented
+- `System_Ext(id, "Name", "Description")` - External system that your system interacts with
+- `SystemDb_Ext(id, "Name", "Description")` - External database system
+- `SystemQueue_Ext(id, "Name", "Description")` - External message queue system
+
+### Boundary Components
+
+- `Enterprise_Boundary(id, "Name")`
+  - Groups elements (people, systems, databases) within your enterprise/organization based on organizational ownership.
+  - Can be nested to represent organizational hierarchies (e.g., corporation containing divisions or subsidiaries)
+- `System_Boundary(id, "Name")` - Groups related external systems or subsystems at the system level
+- `Boundary(id, "Name", "Type")` - Generic boundary for grouping elements
+
+### Relationship Components
+
+- `Rel(from, to, "Label")` - Unidirectional relationship with label
+- `Rel(from, to, "Label", "Technology")` - Unidirectional relationship with label and technology
+- `BiRel(from, to, "Label")` - Bidirectional relationship with label
+
 ## C4 System Context Diagram Mermaid example
 
 ```mermaid
