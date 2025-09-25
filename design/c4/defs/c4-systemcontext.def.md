@@ -40,11 +40,15 @@ External Systems: Any external systems or services that the product interacts wi
 
 ### Boundary Components
 
+- `Boundary(id, "Name", "Type")`
+  - Generic boundary for grouping elements.
+  - Can be nested to represent any type of hierarchical logical groupings (e.g., geographic regions containing countries)
 - `Enterprise_Boundary(id, "Name")`
   - Groups elements (people, systems, databases) within your enterprise/organization based on organizational ownership.
   - Can be nested to represent organizational hierarchies (e.g., corporation containing divisions or subsidiaries)
-- `System_Boundary(id, "Name")` - Groups related external systems or subsystems at the system level
-- `Boundary(id, "Name", "Type")` - Generic boundary for grouping elements
+- `System_Boundary(id, "Name")`
+  - Groups related external systems or subsystems at the system level.
+  - Can be nested to represent hierarchical system relationships (e.g., cloud provider containing service categories)
 
 ### Relationship Components
 
