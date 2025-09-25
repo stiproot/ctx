@@ -1,0 +1,25 @@
+{
+  "name": "ctx",
+  "version": "1.0.0",
+  "description": "A collection of documents that can be used as context for context-driven-development.",
+  "main": "index.js",
+  "scripts": {
+    "lint:md": "npx markdownlint '**/*.md' --config .markdownlint.yml",
+    "lint:md:fix": "npx markdownlint-cli2 --fix '**/*.md' '!**/node_modules/**' --config .markdownlint.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-personal:stiproot/ctx.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2",
+    "@mermaid-js/mermaid-cli": "^11.10.1",
+    "markdownlint-cli": "^0.45.0",
+    "markdownlint-cli2": "^0.18.1"
+  }
+}

@@ -1,0 +1,1 @@
+npx mmdc -i design/c4-container.example.md -o _.md && rm _.md && rm _-1.svg
