@@ -56,7 +56,8 @@ Container diagrams introduce an additional boundary type:
 Container diagrams support various nesting permutations to represent different architectural scenarios:
 
 #### Enterprise containing Systems containing Containers
-```
+
+```mmd
 Enterprise_Boundary(enterprise, "Company") {
   System_Boundary(system1, "Core Banking System") {
     Container_Boundary(app1, "Internet Banking App") {
@@ -69,10 +70,12 @@ Enterprise_Boundary(enterprise, "Company") {
   }
 }
 ```
+
 Use when: Showing multiple systems within an enterprise, with one system broken down into containers.
 
 #### System containing multiple Container Boundaries
-```
+
+```mmd
 System_Boundary(ecommerce, "E-commerce Platform") {
   Container_Boundary(frontend, "Frontend Services") {
     Container(web, "Web Store", "React")
@@ -84,10 +87,12 @@ System_Boundary(ecommerce, "E-commerce Platform") {
   }
 }
 ```
+
 Use when: Breaking down a single system into logical service groups.
 
 #### Generic Boundary for deployment environments
-```
+
+```mmd
 Boundary(prod, "Production Environment", "AWS") {
   Container_Boundary(app, "Application") {
     Container(web, "Web App", "Docker")
@@ -95,10 +100,12 @@ Boundary(prod, "Production Environment", "AWS") {
   }
 }
 ```
+
 Use when: Showing deployment or infrastructure boundaries around containers.
 
 #### Mixed nesting for complex architectures
-```
+
+```mmd
 Enterprise_Boundary(org, "Organization") {
   Boundary(cloud, "Cloud Environment", "AWS") {
     System_Boundary(microservices, "Microservices Platform") {
@@ -109,6 +116,7 @@ Enterprise_Boundary(org, "Organization") {
   System_Ext(legacy, "Legacy System")
 }
 ```
+
 Use when: Representing complex multi-layered architectures with cloud deployment and legacy integration.
 
 ### Relationship Components
